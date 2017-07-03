@@ -482,7 +482,7 @@ Internet-Draft          Service Discovery Broker               July 2017
               <http://www.rfc-editor.org/info/rfc6763>.
 
    [Roadmap]  Cheshire, S., "Service Discovery Road Map", draft-
-              cheshire-dnssd-roadmap-00 (work in progress), June 2017.
+              cheshire-dnssd-roadmap-00 (work in progress), July 2017.
 
    [DisProx]  Cheshire, S., "Discovery Proxy for Multicast DNS-Based
               Service Discovery", draft-ietf-dnssd-hybrid-07 (work in
