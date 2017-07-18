@@ -160,7 +160,7 @@ Check output with <http://tools.ietf.org/tools/idnits/>
       not be discoverable by the person in the very next office.</t>
 
       <t>One path to solving this problem is as follows:
-        <list style="numbers">
+        <list style='numbers'>
           <t>Install a <xref target="DisProx">Discovery Proxy</xref> on each of the twelve links.</t>
           <t>Create twelve named subdomains, such as,
           “services1.example.com”,

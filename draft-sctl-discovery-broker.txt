@@ -74,8 +74,8 @@ Internet-Draft          Service Discovery Broker               July 2017
    Multicast DNS [RFC6762].  DNS-SD can span multiple links using
    unicast DNS.
 
-   In the DNS-SD specification [RFC6763] section 11, “Discovery of
-   Browsing and Registration Domains (Domain Enumeration)”, describes
+   In the DNS-SD specification [RFC6763] section 11, "Discovery of
+   Browsing and Registration Domains (Domain Enumeration)", describes
    how client devices are automatically configured with the appropriate
    unicast DNS domains in which to perform their service discovery
    queries.  When used in conjunction with a Discovery Proxy [DisProx]
@@ -142,22 +142,22 @@ Internet-Draft          Service Discovery Broker               July 2017
    occurrence.  Since this example building contains eleven invisible
    boundaries between the twelve different links, anyone close to one of
    those invisible boundaries will have a population of nearby devices
-   that are not discoverable on the network, because they’re on a
+   that are not discoverable on the network, because they're on a
    different link.  For example, a shared printer in a corridor outside
-   one person’s office may not be discoverable by the person in the very
+   one person's office may not be discoverable by the person in the very
    next office.
 
    One path to solving this problem is as follows:
 
    1.  Install a Discovery Proxy [DisProx] on each of the twelve links.
 
-   2.  Create twelve named subdomains, such as, “services1.example.com”,
-       “services2.example.com”, “services3.example.com”, and so on.
+   2.  Create twelve named subdomains, such as, "services1.example.com",
+       "services2.example.com", "services3.example.com", and so on.
 
    3.  Delegate each named subdomain to the corresponding Discovery
        Proxy on that link.
 
-   4.  Create entries in the ‘ip6.arpa’ reverse mapping zone directing
+   4.  Create entries in the 'ip6.arpa' reverse mapping zone directing
        clients on each link to perform service discovery queries in the
        appropriate named subdomains, as documented in section 11 of the
        DNS-SD specification [RFC6763].
@@ -185,20 +185,20 @@ Internet-Draft          Service Discovery Broker               July 2017
 
    In this example, each reverse mapping domain is populated with the
    name of its own services subdomain, plus its neighbors.  The reverse
-   mapping domain for the first link has two “lb._dns-sd._udp” PTR
-   records, referencing “services1.example.com” and
-   “services2.example.com”.  The second link references services1,
+   mapping domain for the first link has two "lb._dns-sd._udp" PTR
+   records, referencing "services1.example.com" and
+   "services2.example.com".  The second link references services1,
    services2, and services3.  The third link references services2,
    services3, and services4.  This continues along the building, until
    the last link, which references services11 and services12.
 
-   In this way a “sliding window” is created, where devices on each link
+   In this way a "sliding window" is created, where devices on each link
    are directed to look for services both on that link and on its two
    immediate neighbors.  Depending on the physical and logical
    topologies of the building and its network, it may be appropriate to
    direct clients to query in more than three services subdomains.  If
    the building were a ring instead of a linear rectangle, then the
-   network topology would “wrap around”, so that links 1 and 12 would be
+   network topology would "wrap around", so that links 1 and 12 would be
    neighbors.
 
    This solves the problem of being unable to discover a nearby device
@@ -256,7 +256,7 @@ Internet-Draft          Service Discovery Broker               July 2017
    A Discovery Broker is a similar concept, except that it learns its
    zone data dynamically as a result of performing *unicast* DNS
    queries.  For example, a Discovery Broker could be configured so that
-   the answer for “<something>.discovery5.example.com” is obtained by
+   the answer for "<something>.discovery5.example.com" is obtained by
    performing corresponding unicast DNS queries:
 
       <something>.services4.example.com
@@ -347,7 +347,7 @@ Internet-Draft          Service Discovery Broker               July 2017
    discovery of devices and services according to other logical
    relationships.
 
-   For example, it might be considered desirable for the company’s two
+   For example, it might be considered desirable for the company's two
    file servers to be discoverable company-wide, but for its many
    printers to only be discovered (by default) by devices on nearby
    network links.
@@ -397,7 +397,7 @@ Internet-Draft          Service Discovery Broker               July 2017
 6.  Recursive Application
 
    Due to the Protocol Transparency property described above, multiple
-   Discovery Brokers may be “stacked” in whatever combinations are
+   Discovery Brokers may be "stacked" in whatever combinations are
    useful.  A Discovery Broker makes queries in exactly the same way a
    client would, and a Discovery Broker accepts queries in exactly the
    same way a Discovery Proxy (or other authoritative DNS server) would.
@@ -485,8 +485,8 @@ Internet-Draft          Service Discovery Broker               July 2017
               cheshire-dnssd-roadmap-00 (work in progress), July 2017.
 
    [DisProx]  Cheshire, S., "Discovery Proxy for Multicast DNS-Based
-              Service Discovery", draft-ietf-dnssd-hybrid-07 (work in
-              progress), July 2017.
+              Service Discovery", draft-ietf-dnssd-hybrid-06 (work in
+              progress), March 2017.
 
    [Push]     Pusateri, T. and S. Cheshire, "DNS Push Notifications",
               draft-ietf-dnssd-push-12 (work in progress), July 2017.
