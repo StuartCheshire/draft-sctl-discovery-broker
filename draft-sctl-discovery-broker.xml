@@ -44,17 +44,17 @@ Check output with <http://tools.ietf.org/tools/idnits/>
   <front>
     <title abbrev='Service Discovery Broker'>Service Discovery Broker</title>
 
-    <author initials='S' surname='Cheshire' fullname='Stuart Cheshire'>
+    <author initials='S.' surname='Cheshire' fullname='Stuart Cheshire'>
       <organization>Apple Inc.</organization>
       <address>
         <postal>
-          <street>1 Infinite Loop</street>
+          <street>One Apple Park Way</street>
           <city>Cupertino</city>
           <region>California</region>
           <code>95014</code>
           <country>USA</country>
         </postal>
-        <phone>+1 408 974 3207</phone>
+        <phone>+1 (408) 996-1010</phone>
         <email>cheshire@apple.com</email>
       </address>
     </author>
